@@ -1,17 +1,11 @@
 language: php
 
-
-cache:
-  directories:
-    - $HOME/.composer/cache
-
-
 php:
   - 7.0
 
+#
+#before_script:
+#    - flags="--prefer-dist"
+#    - composer install $flags
 
-before_script:
-    - flags="--prefer-dist"
-    - composer install $flags
-    - bin/composer install $flags
-
+script: phpunit tests
