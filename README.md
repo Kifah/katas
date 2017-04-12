@@ -1,4 +1,7 @@
 # katas
+
+[![Build Status](https://travis-ci.org/Kifah/katas.svg?branch=master)](https://travis-ci.org/Kifah/katas)
+
 A selection of minor programms or coding Katas Using PHP7
 
 
