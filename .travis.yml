@@ -3,9 +3,8 @@ language: php
 php:
   - 7.0
 
-#
-#before_script:
-#    - flags="--prefer-dist"
-#    - composer install $flags
 
-script: phpunit tests
+before_script:
+    - composer install
+
+script: vendor/bin/phpunit tests
