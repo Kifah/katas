@@ -7,6 +7,11 @@
 namespace App;
 
 
+/**
+ * a class that simply represents a chess board
+ * Class ChessBoard
+ * @package App
+ */
 class ChessBoard
 {
 
@@ -15,7 +20,7 @@ class ChessBoard
     const BLACK = 'black---';
 
 
-    public static function build()
+    public static function build(): array
     {
 
         $returnArray = [];

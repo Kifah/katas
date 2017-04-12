@@ -10,84 +10,73 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @expectedException \ErrorException
+     * @expectedExceptionMessage out of range
      */
-    public function itTranslatesOneForFizzBuzz()
+    public function outOfRanceHigherThanHundred()
     {
-        $number = 1;
-        $expected = 1;
+        $number = 101;
         $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
-
     }
 
+    /**
+     * @test
+     * @expectedException \ErrorException
+     * @expectedExceptionMessage out of range
+     */
+    public function outOfRangeMinus()
+    {
+        $number = -1;
+        $actual = FizzBuzz::execute($number);
+    }
 
     /**
      * @test
      */
-    public function itTranslates2ForFizzBuzz()
-    {
-        $number = 2;
-        $expected = 2;
-        $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
-    }
-
-
-    /**
-     * @test
-     */
-    public function itTranslates3ForFizzBuzz()
+    public function threeReturnsFizz()
     {
         $number = 3;
-        $expected = 'Fizz';
         $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
-    }
-
-
-    /**
-     * @test
-     */
-    public function itTranslates5ForFizzBuzz()
-    {
-        $number = 5;
-        $expected = 'Buzz';
-        $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals('fizz', $actual);
     }
 
     /**
      * @test
      */
-    public function itTranslates6ForFizzBuzz()
+    public function sixReturnsFizz()
     {
         $number = 6;
-        $expected = 'Fizz';
         $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals('fizz', $actual);
     }
 
     /**
      * @test
      */
-    public function itTranslates10ForFizzBuzz()
+    public function twoReturnsTwo()
     {
-        $number = 10;
-        $expected = 'Buzz';
+        $number = 2;
         $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals($number, $actual);
     }
 
     /**
      * @test
      */
-    public function itTranslates15ForFizzBuzz()
+    public function fiveReturnsBuzz()
+    {
+        $number = 5;
+        $actual = FizzBuzz::execute($number);
+        $this->assertEquals('buzz', $actual);
+    }
+
+    /**
+     * @test
+     */
+    public function returnFizzBuzz()
     {
         $number = 15;
-        $expected = 'FizzBuzz';
         $actual = FizzBuzz::execute($number);
-        $this->assertEquals($expected, $actual);
+        $this->assertEquals('fizzbuzz', $actual);
     }
-
-
 }

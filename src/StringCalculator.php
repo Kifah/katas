@@ -6,9 +6,13 @@
 
 namespace App;
 
-
 use InvalidArgumentException;
 
+/**
+ * a simple class, that converts a string separated with commas into an array of integers
+ * Class StringCalculator
+ * @package App
+ */
 class StringCalculator
 {
 
@@ -38,7 +42,7 @@ class StringCalculator
     /**
      * @param $number
      */
-    protected static function guardAgainstInvalidNumber($number)
+    protected static function guardAgainstInvalidNumber(string $number)
     {
         if ($number < 0) {
             throw new InvalidArgumentException('Invalid number provided: ' . $number);
