@@ -24,6 +24,7 @@ Then, simply run `vendor/bin/phpunit tests/` to run the unit tests
 * `ArrayCounter` : count the occurrence of an element, in an a given array. Also supports nested arrays
 *  `ChessBoard` : a simple representation of a simple chess board
 * `Tennis`-Folder: contains classes representing a tennis-scoring game
+* `SimpleStack`: a simple LIFO (first in last out) stack implementation.
 * `FizzBuzz`: the famous [FizzBuzz Code-Kata ](http://www.codekatas.org/casts/code-kata-fizzbuzz-by-lets-develop)
 * `StringCalculator`: a simple class, that converts a string separated with commas into an array of integers
 * `PrimeFactors`: the prime factors coding kata by [uncle bob](http://www.butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
